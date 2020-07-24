@@ -1,7 +1,7 @@
 {
   "name": "corsproxy",
   "description": "Simple node proxy to quickly bypass cors",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/index.js",
   "repository": {
     "type": "git",
@@ -16,10 +16,10 @@
     "docker"
   ],
   "license": "MIT",
-  "author": { 
-    "name" : "Julien LA VINH" , 
-    "email" : "julien@devpulsion.com" ,
-    "url" : "https://www.devpulsion.com/"
+  "author": {
+    "name": "Julien LA VINH",
+    "email": "julien@devpulsion.com",
+    "url": "https://www.devpulsion.com/"
   },
   "scripts": {
     "start": "BABEL_ENV=node NODE_ENV=development nodemon --exec babel-node -w src src/index.js",
