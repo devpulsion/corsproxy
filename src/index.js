@@ -13,7 +13,6 @@ const parseEnvList = (env) => !env ? [] : env.split(',').map(v => `${v}`.trim())
 proxy.createServer({
   originBlacklist: parseEnvList(process.env.BLACKLIST),
   originWhitelist: parseEnvList(process.env.WHITELIST),
-  requireHeader: ['origin', 'x-requested-with'],
   removeHeaders: parseEnvList(process.env.REMOVE_HEADERS),
   redirectSameOrigin: Boolean(process.env.REDIRECT_SAME_ORIGIN),
   setHeaders: { Origin: DOMAIN, origin: DOMAIN },
