@@ -1,0 +1,25 @@
+name: Build docker
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  dockers:
+    name: Build and publish docker image
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Publish api to docker registry
+        uses: elgohr/Publish-Docker-Github-Action@2.18
+        with:
+          workdir: .
+          dockerfile: Dockerfile
+          buildoptions: "--compress --force-rm"
+          name: devpulsion/corsproxy/basic
+          username: ${{ secrets.DEPLOY_GITHUB_USERNAME }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+          registry: docker.pkg.github.com
+          tags: "latest,${{ github.event.release.tag_name }}"
