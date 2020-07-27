@@ -8,7 +8,7 @@ A basic docker to proxy request to a server and bypass the cors by providing som
 docker run -it -p 3030:3030 -e DOMAIN=https://google.com  docker.pkg.github.com/devpulsion/corsproxy/basic
 ```
 
-Then, prepend any url with `http://123.123.123.123:3123/`. It will process your url request with DOMAIN as cors origin, and return it, without requiring cors from your client. Tada.
+Then, prepend any url with `http://0.0.0.0:3030/`. It will process your url request with DOMAIN as cors origin, and return it, without requiring cors from your client. Tada.
 
 ## Options
 
