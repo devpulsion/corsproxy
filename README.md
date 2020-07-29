@@ -4,11 +4,19 @@ A basic docker to proxy request to a server and bypass the cors by providing som
 
 ## Usage
 
+### Usecase
+
+You need to process a http request from your app browser to a server wich has CORS restriction on a domain (from `https://website.com` for example) but your app run on another domain.
+
+You can start the current proxy, and then process all your request from your app to it. It will foward your request by adding a header with the `https://website.com` as origin, and return the response.
+
+### Run
+
 ```sh
-docker run -it -p 3030:3030 -e DOMAIN=https://google.com  docker.pkg.github.com/devpulsion/corsproxy/basic
+docker run -it -p 3030:3030 -e DOMAIN=https://website.com  docker.pkg.github.com/devpulsion/corsproxy/basic
 ```
 
-Then, prepend any url with `http://0.0.0.0:3030/`. It will process your url request with DOMAIN as cors origin, and return it, without requiring cors from your client. Tada.
+Then, prepend any url needed `https://website.com` as cors with `http://0.0.0.0:3030/`.
 
 ## Options
 
