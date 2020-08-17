@@ -2,6 +2,7 @@
 
 [![Actions Status](https://github.com/devpulsion/corsproxy/workflows/Build%20docker/badge.svg)](https://github.com/devpulsion/corsproxy/actions)
 [![Release](https://img.shields.io/github/v/release/devpulsion/corsproxy.svg)](https://github.com/devpulsion/corsproxy/releases)
+[![Docker image](https://img.shields.io/badge/Download-Docker%20image-orange)](https://github.com/devpulsion/corsproxy/packages/327628?version=latest)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 
