@@ -1,5 +1,10 @@
 # Cors proxy
 
+[![Actions Status](https://github.com/devpulsion/corsproxy/workflows/Build%20docker/badge.svg)](https://github.com/devpulsion/corsproxy/actions)
+[![Release](https://img.shields.io/github/v/release/devpulsion/corsproxy.svg)](https://github.com/devpulsion/corsproxy/releases)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+
+
 A basic docker to proxy request to a server and bypass the cors by providing some origin. Really stupid docker image running the awesome  [cors-anywhere](https://github.com/Rob--W/cors-anywhere).
 
 ## Usage
