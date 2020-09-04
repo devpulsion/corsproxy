@@ -2,7 +2,7 @@ import proxy from 'cors-anywhere';
 
 const host = process.env.HOST || '0.0.0.0';
 const port = process.env.PORT || 3030;
-const DOMAIN = process.env.DOMAIN || '';
+const DOMAIN = process.env.DOMAIN || '*';
 
 if (!DOMAIN) {
   throw new Error('Expect DOMAIN environement var');

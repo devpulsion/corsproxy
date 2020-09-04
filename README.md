@@ -30,7 +30,7 @@ Options available through env vars:
 
 | name                 | required | default | description                                         |
 |----------------------|----------|---------|-----------------------------------------------------|
-| DOMAIN               | yes      |         | the cors domain to provide as origin to bypass cors |
+| DOMAIN               | no       | *       | the cors domain to provide as origin to bypass cors |
 | HOST                 | no       | 0.0.0.0 | host the proxy server run                           |
 | PORT                 | no       | 3030    | port the proxy server will listen                   |
 | BLACKLIST            | no       |         | comma separated host to blackist                    |
