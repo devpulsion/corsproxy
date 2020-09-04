@@ -19,15 +19,15 @@ const parseEnvObject = (env) => {
   }
 };
 
-proxy
-  .createServer({
-    originBlacklist: parseEnvList(process.env.BLACKLIST),
-    originWhitelist: parseEnvList(process.env.WHITELIST),
-    removeHeaders: parseEnvList(process.env.REMOVE_HEADERS),
-    redirectSameOrigin: Boolean(process.env.REDIRECT_SAME_ORIGIN),
-    setHeaders: { Origin: DOMAIN, origin: DOMAIN },
-    httpProxyOptions: parseEnvObject(process.env.HTTP_PROXY_OPTIONS),
-  })
-  .listen(port, host, () => {
-    console.info('Cors proxy is running', { port });
-  });
+const config = {
+  originBlacklist: parseEnvList(process.env.BLACKLIST),
+  originWhitelist: parseEnvList(process.env.WHITELIST),
+  removeHeaders: parseEnvList(process.env.REMOVE_HEADERS),
+  redirectSameOrigin: Boolean(process.env.REDIRECT_SAME_ORIGIN),
+  setHeaders: { Origin: DOMAIN, origin: DOMAIN },
+  httpProxyOptions: parseEnvObject(process.env.HTTP_PROXY_OPTIONS),
+};
+
+proxy.createServer(config).listen(port, host, () => {
+  console.info('Cors proxy is running', { port, config });
+});
