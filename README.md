@@ -37,6 +37,11 @@ Options available through env vars:
 | WHITELIST            | no       |         | comma separated host to whitelist                   |
 | REMOVE_HEADERS       | no       |         | comma separated headers to remove                   |
 | REDIRECT_SAME_ORIGIN | no       |         | to allow redirect on same origin                    |
+| HTTP_PROXY_OPTIONS   | no       |         | Json serialize options                              |
+
+`HTTP_PROXY_OPTIONS` is a serialized json of options available here: https://github.com/http-party/node-http-proxy#options
+
+Exemple: `HTTP_PROXY_OPTIONS={\"xfwd\":false}`
 
 ## License
 
